@@ -1,6 +1,9 @@
+const path = require("path");
+
 const fs = require("fs");
 
-const pathfile = "./datas/tasks.json"
+const pathfile = path.join(__dirname, "datas", "tasks.json");
+
 
 exports.getAll = (req, res)=>{
     const data = fs.readFileSync(pathfile);
